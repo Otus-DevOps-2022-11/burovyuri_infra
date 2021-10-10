@@ -40,3 +40,6 @@ Host someinternalhost
 Далее подключиться можно с помощью команды:
 
 `ssh someinternalhost`
+
+bastion_IP = 178.154.198.218
+someinternalhost_IP = 10.129.0.33
