@@ -1,7 +1,7 @@
-# Лекция 5 / ДЗ
+# Выполнение ДЗ по серверу colud-bastion
 
 Для того, чтобы подключиться на целевой сервер (`someinternalhost`),
-необходимо воспользоваться bastion сервером использую SSH Agent.
+необходимо воспользоваться bastion сервером используя SSH Agent.
 
 Открыть ваш `~/.ssh/config` и внести туда настройки:
 
@@ -36,3 +36,10 @@ Host someinternalhost
     IdentityFile ~/.ssh/id_rsa
     ProxyCommand ssh -A appuser@84.201.165.246 nc %h 22
 ```
+
+Далее подключиться можно с помощью команды:
+
+`ssh someinternalhost`
+
+bastion_IP = 178.154.198.218
+someinternalhost_IP = 10.129.0.33
