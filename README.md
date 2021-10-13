@@ -1,3 +1,23 @@
+# Выполнение ДЗ по деплою приложения в yc
+
+
+
+Создаем машину с запущенным приложением:
+(запуск из папки репозитория)
+```
+yc compute instance create \
+  --name reddit-app \
+  --hostname reddit-app \
+  --memory=4 \
+  --create-boot-disk image-folder-id=standard-images,image-family=ubuntu-1604-lts,size=10GB \
+  --network-interface subnet-name=default-ru-central1-b,nat-ip-version=ipv4 \
+  --metadata-from-file user-data=metadata.yaml \
+  --metadata serial-port-enable=1 \
+```
+
+testapp_IP = 62.84.121.185
+testapp_port = 9292
+
 # Выполнение ДЗ по серверу colud-bastion
 
 Для того, чтобы подключиться на целевой сервер (`someinternalhost`),
