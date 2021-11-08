@@ -22,7 +22,7 @@ packer build -var-file=variables.json immutable.json
 
 Переходим в папку `/config-scripts` и выполняем:
 ```shell
-sh config-scripts/create-reddit.sh
+sh create-reddit.sh
 ```
 
 ## Проверка работы приложения
