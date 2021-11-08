@@ -1,0 +1,34 @@
+#cloud-config
+
+# ключ по которому мы зайдем на машину
+users:
+  - name: appuser
+    groups: sudo
+    shell: /bin/bash
+    sudo: ['ALL=(ALL) NOPASSWD:ALL']
+    ssh-authorized-keys:
+        - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDGd+1Qoe+oVbqIKW6k3sWfNb1eYPR6OB27Vcy02z6CJgBiziYNwzAIJWVBRmSu8RKN0Vqo1Pzv2JI9ofxAXQ+8zObTXE8HgEETh53ioh9eNZMj0YnMlq4YVnYL2evy2lpPGhjy7XW+6u+swRr5oro2K0fEAQcp9/2lDEZfbp/wjgm8X6opfhlIup/kS6vjLNFTIUmsjcZ61S4mVT2QW5SPyJ+dGrfI2zHmsBJK8bkP5HPYDh9oDVelAvEpMrbwqsEVClUZejNH40s0h/d+TEXJiGvJhdcuWfGC4YzSK9UZx0iDtuA7Z0iVFUzbYvVk9UTN3Aw1SnlT7WqH4KiXUAacwbDE7KYH84CV6DPllC5olnZLmh8BOI1xslWGt38++mGhTBTfCydeJUkE47hrl+qyaPZQOe59bIKbDfxBHeSETJiE2tCKn0OJwXidi40eiwuKhSOvqE2kW5cbidGNQ03ePxr4+MJO3Ohc3iF7QO7K2kQZvpmTM9xV7uR+quGL790= burovyuri@mbpburov.local
+
+# создадим unit для puma
+write_files:
+  - path: /lib/systemd/system/puma.service
+    content: |
+      [Unit]
+      Description=Puma HTTP Server
+      After=network.target
+
+      [Service]
+      Type=simple
+
+      WorkingDirectory=/home/ubuntu/reddit
+      ExecStart=/usr/local/bin/puma
+
+      Restart=always
+
+      [Install]
+      WantedBy=multi-user.target
+
+# запустим его
+runcmd:
+  - systemctl enable puma
+  - systemctl start puma
