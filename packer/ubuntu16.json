@@ -2,7 +2,6 @@
   "builders": [
     {
       "type": "yandex",
-      "service_account_key_file": "./../../key.json",
       "folder_id": "b1gvvod9ju9rre7itahr",
       "source_image_family": "ubuntu-1604-lts",
       "image_name": "reddit-base-{{timestamp}}",
