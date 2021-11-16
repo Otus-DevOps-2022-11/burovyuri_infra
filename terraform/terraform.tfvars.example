@@ -1,0 +1,8 @@
+service_account_key_file = "../../key.json"
+folder_id                = "b1gvvod9ju9rre7itahr"
+cloud_id                 = "b1gum93g30v4dfg1a1rg"
+public_key_path          = "~/.ssh/id_rsa.pub"
+private_key_path         = "~/.ssh/id_rsa"
+zone                     = "ru-central1-a"
+image_id                 = "fd81eecsvmdk8tro8rf5"
+subnet_id                = "e9bl33gr8sb4ds0ptu57"
