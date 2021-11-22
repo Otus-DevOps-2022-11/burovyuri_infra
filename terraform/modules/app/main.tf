@@ -1,16 +1,9 @@
-provider "yandex" {
-  service_account_key_file = var.service_account_key_file
-  folder_id                = var.folder_id
-  cloud_id                 = var.cloud_id
-  version                  = "0.35"
-}
-
 resource "yandex_compute_instance" "app" {
   name = "reddit-app"
   zone = var.zone
 
-  metadata = {
-    ssh-keys = "ubuntu:${file(var.public_key_path)}"
+  labels = {
+    tags = "reddit-app"
   }
 
   resources {
@@ -20,13 +13,17 @@ resource "yandex_compute_instance" "app" {
 
   boot_disk {
     initialize_params {
-      image_id = var.image_id
+      image_id = var.app_disk_image
     }
   }
 
   network_interface {
     subnet_id = var.subnet_id
-    nat       = true
+    nat = true
+  }
+
+  metadata = {
+    ssh-keys = "ubuntu:${file(var.public_key_path)}"
   }
 
   connection {
@@ -38,12 +35,12 @@ resource "yandex_compute_instance" "app" {
   }
 
   provisioner "file" {
-    source      = "files/puma.service"
+    source      = "../files/puma.service"
     destination = "/tmp/puma.service"
   }
 
   provisioner "remote-exec" {
-    script = "files/deploy.sh"
+    script = "../files/deploy.sh"
   }
 
 }
