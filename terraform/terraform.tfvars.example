@@ -1,4 +1,4 @@
-service_account_key_file = "../key.json"
+service_account_key_file = "../../key.json"
 folder_id                = "b1gvvod9ju9rre7itahr"
 cloud_id                 = "b1gum93g30v4dfg1a1rg"
 public_key_path          = "~/.ssh/id_rsa.pub"
