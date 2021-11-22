@@ -1,1 +1,8 @@
-#censored
+{
+   "id": "aje5a496oas1fkn5kk52",
+   "service_account_id": "aje68m3n3cj7iuja92cd",
+   "created_at": "2021-10-14T18:16:41.976178494Z",
+   "key_algorithm": "RSA_2048",
+   "public_key": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkVu2k9z8AHQrgVQtB5sZ\nTCEp2cAFG7TLxiQulaYa6HnYcLHl6mO1T4vcrnNZ0jdcTcI40ONKDdu5epIu5Gvn\nIl+V1SO2oA+bnlbAk2HQrnIX7RqgJnLA4FbagzyIZOZBgGsyYPQnDq+nqHBlt2KQ\nf1AOZQeVNxJIgcSDraY1WYTfpbWet9M4nw2Cxnf5VMx3ZfbvmEaXKjnFHKFBendz\nL1xb3hudsvcen7X0z6WHl+B7YMKZv9BWpE2dzXfUHixCwD8jIPH1wOj7MPyCb8m4\n29Y6y6klILwHWRgdM/n+naP9sLAb3jbbsxJ7upU1/7OSZxkk0x5yKU9YVic+4AGr\n/wIDAQAB\n-----END PUBLIC KEY-----\n",
+   "private_key": "-----BEGIN PRIVATE KEY-----*****-----END PRIVATE KEY-----\n"
+}
