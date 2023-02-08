@@ -8,3 +8,4 @@ packer/yc_yandex.pem
 *.tfvars
 .terraform/
 key.json
+*.retry
