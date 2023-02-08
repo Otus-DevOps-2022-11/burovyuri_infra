@@ -7,3 +7,4 @@ packer/yc_yandex.pem
 *.tfstate.backup
 *.tfvars
 .terraform/
+key.json
