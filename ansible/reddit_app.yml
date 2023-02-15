@@ -3,7 +3,7 @@
   hosts: all
   vars:
     mongo_bind_ip: 0.0.0.0
-    db_host: 51.250.7.156
+    db_host: 51.250.5.173
   tasks:
     - name: Change mongo config file
       become: true
@@ -46,7 +46,8 @@
         state: present
         chdir: /home/ubuntu/reddit
       tags: deploy-tag
-
+#  environment:
+#    DATABASE_URL: db_host
   handlers:
     - name: restart mongod
       become: true
