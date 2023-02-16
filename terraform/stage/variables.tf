@@ -26,11 +26,11 @@ variable yc_version {
 }
 variable app_disk_image {
   description = "Disk image for reddit app"
-  default     = "fd8j6iqbm377ob9sdaqo"
+  default     = "fd8vg8g0l3ng3tj9r0c9"
 }
 variable db_disk_image {
   description = "Disk image for reddit db"
-  default     = "fd8aapqo998nninut4ou"
+  default     = "fd8df1n7ku9mtbulrvd0"
 }
 variable subnet_id {
   description = "Subnets for main"
