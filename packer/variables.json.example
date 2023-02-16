@@ -1,5 +1,5 @@
 {
     "folderId": "b1gvvod9ju9rre7itahr",
     "sourceId": "ubuntu-1604-lts",
-    "serviceAccountKeyFile": "./../key.json"
+    "serviceAccountKeyFile": "./key.json"
 }
