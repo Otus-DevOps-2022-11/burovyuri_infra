@@ -1,0 +1,13 @@
+---
+- name: Install Ruby && Bundler
+  hosts: all
+  become: true
+  tasks:
+  - name: Install Ruby & Bundler
+    apt:
+      update_cache: yes
+      pkg:
+      - git
+      - ruby-full
+      - ruby-bundler
+      - build-essential
