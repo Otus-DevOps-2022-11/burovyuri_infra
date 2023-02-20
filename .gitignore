@@ -9,3 +9,5 @@ packer/yc_yandex.pem
 .terraform
 *.retry
 key.json.work
+jdauphant.nginx
+vault.key
