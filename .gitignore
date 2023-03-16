@@ -11,3 +11,11 @@ packer/yc_yandex.pem
 key.json.work
 jdauphant.nginx
 vault.key
+
+# Vagrant & molecule
+.vagrant/
+*.log
+*.pyc
+.molecule
+.cache
+.pytest_cache
